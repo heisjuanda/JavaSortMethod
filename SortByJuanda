@@ -2,7 +2,6 @@ public void sortByJuanDa(int a[]) {
         int menor = a[0];
         int mayor = a[0];
         int iterador = 0;
-        int contador = 0;
         int validador[] = new int[a.length];
         int b[] = new int[a.length];
         
@@ -10,18 +9,15 @@ public void sortByJuanDa(int a[]) {
             for (int j = 0; j < a.length; j++) {
                 if (menor > a[j] && validador[j] != 1) {
                     menor = a[j];
-                    b[contador] = menor;
+                    b[i] = menor;
                     iterador = j;
                 }
                 if (mayor < a[j]) {
                     mayor = a[j];
                 }
-                if (i == a.length - 1) {
-                    b[b.length - 1] = mayor;
-                }
+                
             }
-            contador++;
             validador[iterador] = 1;
-            menor = mayor;
+            menor = mayor+1;
         }
     }
